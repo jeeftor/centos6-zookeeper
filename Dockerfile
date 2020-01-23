@@ -1,4 +1,4 @@
-FROM centos:6 as base
+FROM centos:7 as base
 
 
 # wurstmeister/docker-base stuff
