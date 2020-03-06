@@ -8,7 +8,7 @@ FROM centos:7 as base
 RUN yum install -y wget openssh-server \
     java-1.8.0-openjdk \
     java-1.8.0-openjdk-devel &&\
-    yum clean all
+    yum -y upgrade  && yum clean all
 
 #Configure Java
 ENV JAVA_HOME /usr/lib/jvm/jre-1.8.0-openjdk
