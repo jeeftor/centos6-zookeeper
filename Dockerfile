@@ -19,6 +19,9 @@ RUN yum install -y wget openssh-server \
     java-1.8.0-openjdk-devel &&\
     yum -y upgrade && yum clean all
 
+# Do upgrade check and stuf
+RUN yum check-update && yum upgrade -y
+
 #Configure Java
 ENV JAVA_HOME /usr/lib/jvm/jre-1.8.0-openjdk
 
